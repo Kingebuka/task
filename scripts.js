@@ -99,6 +99,10 @@ document.addEventListener('DOMContentLoaded', function () {
             taskList.appendChild(taskItem);
         });
     }
+    gtag('event', 'button_click', {
+        'event_category': 'button',
+        'event_label': 'sign_up',
+      });
 
     function updateTaskInLocalStorage(taskItem) {
         const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
