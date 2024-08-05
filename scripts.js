@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         taskDescription.textContent = description;
 
         const taskDueDate = document.createElement('small');
-        taskDueDate.textContent = `Due: ${dueDate}`;
+        taskDueDate.textContent =` Due: ${dueDate}`;
 
         const completeButton = document.createElement('button');
         completeButton.textContent = 'Complete';
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
             taskDescription.textContent = task.description;
 
             const taskDueDate = document.createElement('small');
-            taskDueDate.textContent = `Due: ${task.dueDate}`;
+            taskDueDate.textContent =`Due: ${task.dueDate}`;
 
             const completeButton = document.createElement('button');
             completeButton.textContent = 'Complete';
@@ -99,10 +99,6 @@ document.addEventListener('DOMContentLoaded', function () {
             taskList.appendChild(taskItem);
         });
     }
-    gtag('event', 'button_click', {
-        'event_category': 'button',
-        'event_label': 'sign_up',
-      });
 
     function updateTaskInLocalStorage(taskItem) {
         const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
